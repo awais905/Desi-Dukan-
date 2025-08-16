@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muzaffargarh Grocery Store</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#1a1a1a;color:#fff;transition:0.3s;direction:ltr;}
+a{text-decoration:none;color:inherit;}
+img{max-width:100%;display:block;}
+button, select{font-family:'Poppins',sans-serif;}
+button{background:linear-gradient(45deg,#ffb400,#e0a000);color:#000;padding:12px 25px;border:none;border-radius:8px;font-weight:600;cursor:pointer;transition:0.3s;}
+button:hover{opacity:0.9;}
+select{padding:8px 12px;margin-left:10px;border-radius:6px;outline:none;border:none;cursor:pointer;}
+
+/* Header */
+header{
+  padding:20px 50px;
+  display:flex; justify-content:space-between; align-items:center;
+  background: rgba(20,20,20,0.95);
+  backdrop-filter: blur(5px);
+  position: sticky; top:0; z-index:10;
+}
+.logo{font-size:1.8rem;font-weight:700;color:#ffd966;}
+nav a{margin-left:25px;font-weight:500;color:#fff;transition:0.3s;}
+nav a:hover{color:#ffd966;}
+
+/* Sections */
+.section{padding:60px 20px; max-width:1000px; margin:0 auto;}
+.section h2{font-size:1.8rem;color:#ffd966;margin-bottom:20px;border-bottom:1px solid #ffd966; display:inline-block; padding-bottom:5px;}
+.product-card{
+  display:inline-block;
+  width:calc(33.333% - 20px);
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  border-radius:10px;
+  padding:15px;
+  margin:10px;
+  transition:0.3s;
+  vertical-align:top;
+}
+.product-card:hover{transform:scale(1.02);}
+.product-card img{border-radius:10px;margin-bottom:10px;}
+.product-card h3{color:#ffb400;margin-bottom:5px;}
+.product-card p{color:#ccc;font-size:0.9rem;}
+
+/* Footer */
+footer{background:#121212;text-align:center;padding:20px;color:#aaa;margin-top:50px; font-size:0.9rem;}
+
+/* Responsive */
+@media(max-width:992px){.product-card{width:calc(50% - 20px);}}
+@media(max-width:600px){.product-card{width:100%;margin:10px 0;}}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <div class="logo">Muzaffargarh Grocery Store</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="contact.html">Contact / Order</a>
+    <select onchange="setLang(this.value)">
+      <option value="en">Language / زبان / ٻولي</option>
+      <option value="en">English</option>
+      <option value="ur">Urdu</option>
+      <option value="srk">Saraiki</option>
+    </select>
+  </nav>
+</header>
+
+<!-- Featured Products Section -->
+<section class="section" id="featured">
+<h2 id="featured-title">Top Products / مشہور مصنوعات / مشہور مصنوعات</h2>
+
+<!-- Example Products -->
+<a href="contact.html" class="product-card">
+<img src="images/ghee.jpg" alt="Ghee">
+<h3 id="ghee-title">Ghee / گھی / گھی</h3>
+<p id="ghee-desc">Pure cow ghee, 1kg pack. / خالص گائے کا گھی۔</p>
+</a>
+
+<a href="contact.html" class="product-card">
+<img src="images/oil.jpg" alt="Cooking Oil">
+<h3 id="oil-title">Cooking Oil / تیل / تیل</h3>
+<p id="oil-desc">Refined vegetable oil, 1L. / ریفائنڈ سبزیوں کا تیل۔</p>
+</a>
+
+<a href="contact.html" class="product-card">
+<img src="images/sugar.jpg" alt="Sugar">
+<h3 id="sugar-title">Sugar / چینی / چینی</h3>
+<p id="sugar-desc">Premium sugar, 2kg pack. / بہترین چینی کا پیک۔</p>
+</a>
+
+<a href="contact.html" class="product-card">
+<img src="images/tea.jpg" alt="Tea">
+<h3 id="tea-title">Tea / چائے / چاء</h3>
+<p id="tea-desc">High quality black tea, 500g. / اعلی معیار کی چائے۔</p>
+</a>
+
+<a href="contact.html" class="product-card">
+<img src="images/coffee.jpg" alt="Coffee">
+<h3 id="coffee-title">Coffee / کافی / کافی</h3>
+<p id="coffee-desc">Premium coffee beans, 250g. / بہترین کافی بینز۔</p>
+</a>
+
+<a href="contact.html" class="product-card">
+<img src="images/rice.jpg" alt="Rice">
+<h3 id="rice-title">Rice / چاول / چاول</h3>
+<p id="rice-desc">Basmati rice, 5kg pack. / باسمتی چاول۔</p>
+</a>
+
+<a href="contact.html" class="product-card">
+<img src="images/snacks.jpg" alt="Snacks">
+<h3 id="snacks-title">Snacks / اسنیکس / اسنیکس</h3>
+<p id="snacks-desc">Assorted chips and namkeen. / مختلف اسنیکس۔</p>
+</a>
+
+<a href="contact.html" class="product-card">
+<img src="images/drinks.jpg" alt="Beverages">
+<h3 id="drinks-title">Beverages / مشروبات / مشروبات</h3>
+<p id="drinks-desc">Juices, soft drinks, energy drinks. / جوس، سافٹ ڈرنکس۔</p>
+</a>
+
+</section>
+
+<!-- Footer -->
+<footer>
+Location: Muzaffargarh | Phone: 03080432842 | WhatsApp: 03080432842 | Business Hours: 9 AM - 10 PM<br>
+&copy; 2025 Muzaffargarh Grocery Store. All Rights Reserved.
+</footer>
+
+<!-- Language Script -->
+<script>
+function setLang(lang){
+  if(lang=='ur'){alert('Urdu selected');}
+  else if(lang=='srk'){alert('Saraiki selected');}
+  else{alert('English selected');}
+}
+</script>
+
+</body>
+</html>
